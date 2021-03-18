@@ -9,7 +9,7 @@ import os
 import subprocess
 import numpy
 from multiprocessing import Pool
-#from Amalphy_Script_Tree import readTree, getLeavesNames, getLeavesNumNames, distanceFrom
+from Amalphy_Script_Tree import readTree, getLeavesNames, getLeavesNumNames, distanceFrom
 
 import ctypes
 iaf_lib = ctypes.cdll.LoadLibrary("Library_iaf.so")
