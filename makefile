@@ -1,6 +1,6 @@
 
 default: libc/Library_iaf.c
-	gcc -c libc/Library_iaf.c -o Library_iaf.so -fPIC `python3-config --cflags`
+	python3 setup.py build_ext --inplace && mv Library_iaf.*.so ./Library_iaf.so && rm -Rf build
 
 
 
