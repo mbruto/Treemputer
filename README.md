@@ -38,11 +38,9 @@ First,
 
 ## Limitations
 
-In general, different kind of source trees can be given to reconstruct a Supertree. Classically, each source tree has been reconstructed with different loci and are further amalgamated. Our method has not been designed to work on this kind of datasets and users should not use Treemputer in that context. Other programs have been specifically designed to use these data such as ASTRAL.
+In general, different kind of source trees can be given to reconstruct a Supertree. Classically, each source tree has been reconstructed with different loci and are further amalgamated. **Our method has not been designed to work on this kind of datasets and users should not use Treemputer in that context**. Other programs have been specifically designed to use these data such as ASTRAL. **As an input, users should provide overlapping source trees that have been inferred on a similar set of markers (either single marker or multiple marker) as distances are important for the imputation process.**
 
-As an input, users should provide overlapping source trees that have been inferred on a similar set of markers (either single marker or multiple marker) as distances are important for the imputation process.
-
-Another important limitation of the approach is the impossibility to impute missing distances of sister nodes.
+**Another important limitation of the approach is the impossibility to impute missing distances of sister nodes. This means that users are awaited to give source trees covering closely related species in order to take full advantage of the method.**
 
   
 ## Build Treemputer
