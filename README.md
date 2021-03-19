@@ -45,8 +45,15 @@ In general, different kind of source trees can be given to reconstruct a Supertr
   
 ## Build Treemputer
 
+This will build Treemputer and install the dependencies
+
 ```
 git clone https://github.com/mbruto/Treemputer
 cd Treemputer
 make
 ```
+
+## Usage
+
+```
+python3 
