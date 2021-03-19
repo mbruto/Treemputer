@@ -10,20 +10,25 @@ Treemputer is a method allowing the reconstruction of Supertree with branch leng
 
   * Output a complete matrix if the necessary conditions are respected.
 
-This method is highly inspired from previous work of Alain Guénoche and colleagues and is based on (i) the additivity property of trees and (ii) distance imputation using quartet distances.
+This method is highly inspired from previous work of Alain Guénoche and colleagues and is based on (i) the four-point condition of trees and (ii) distance imputation using quartet distances.
 
 Consider two species I and J with unknown distance in larger distance matrix. The program selects two additional species K and L for which all distances are known. For this example, let's consider that I;K and J;L are closely related (have a small distance) while I;L and J;K are distantly related (have a long distance). We obtain the following quartet :
 
 ```
-I                   J
- \                 /
-  \               /
-   \a___________b/
-   /             \
-  /               \
+I                   J    I/J/K/L are the species considered in the quartet with :
+ \                 /        
+  \               /         - d(IJ) unknown
+   \a___________b/          - d(IK); d(IL); d(JK); d(JL) and d(KL) known   
+   /             \        
+  /               \      a and b are the internal nodes of the quartet
  /                 \
 K                   L
 ```
+
+using this quartet one can calculate the distances d(Ia) ; d(Ib) and d(ab) for which the sum will be equal to d(IJ). These distances are calculated using the formulae :
+
+ * d(Ia) = 1/2 * ( d(IK) + d(IL) - d(KL) )
+
 
   
 ## Build Treemputer
