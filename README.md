@@ -56,4 +56,10 @@ make
 ## Usage
 
 ```
-python3 
+#With source trees as input; one tree per line; Newick format
+python3 Treemputer.py -t [source_trees.new] -o output_matrix
+#With an already computed sparse matrix in phylip format 
+python3 Treemputer.py -m [source_matrix.phy] -o output_matrix
+```
+
+
