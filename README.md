@@ -14,6 +14,7 @@ This method is highly inspired from previous work of Alain Guénoche and colleag
 
 Consider two species I and J with unknown distance in larger distance matrix. The program selects two additional species K and L for which all distances are known. For this example, let's consider that I;K and J;L are closely related (have a small distance) while I;L and J;K are distantly related (have a long distance). We obtain the following quartet :
 
+```
 I                   J
  \                 /
   \               /
@@ -22,7 +23,7 @@ I                   J
   /               \
  /                 \
 K                   L
-
+```
 
   
 ## Build Treemputer
