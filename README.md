@@ -19,10 +19,10 @@
 
 <!--------------------------------------------------------------------------------------------------------------------->
 
-<h2> Installation </h2>
+<h2> Build Treemputer </h2>
 
-<p>
-To build Treemputer type : <br />
-   <code> make </code>
-In the downloaded directory
-</p>
+<code> 
+git clone https://github.com/mbruto/Treemputer </br>
+cd Treemputer <br />
+make <br />
+</code>
