@@ -22,9 +22,7 @@ setuptools.setup(name='Iterative_additive_filling',
  author_email='bruto.maxime@gmail.com',
  scripts=['Iterative_additive_filling.py'],
  install_requires=['argparse', 'numpy'],
- #py_modules = ["lib.Amalphy_Script_Tree"],
  packages=setuptools.find_packages(),
  include_package_data=True,
  ext_modules=[C_extension]
- #ext_modules=[Extension('Library_iaf', sources = ['Library_iaf.c']), extra_compile_args['-fPIC']]
 )
