@@ -80,7 +80,7 @@ double distance_estimation_quartet(int m, int n, int number, double sub_matrix[n
             double d_4 = 0.0;
             double d_5 = 0.0;
             
-            if(sub_matrix[n][l_index] + sub_matrix[m][k_index] - sub_matrix[k_index][l_index] > 0 && sub_matrix[n][k_index] + sub_matrix[m][l_index] - sub_matrix[k_index][l_index] < 0)
+            if(sub_matrix[n][l_index] + sub_matrix[m][k_index] - sub_matrix[k_index][l_index] > sub_matrix[n][k_index] + sub_matrix[m][l_index] - sub_matrix[k_index][l_index])
             {
                     //DIVISER PAR DEUX BORDEL !!!!
                     d_1 = 0.5 * (sub_matrix[m][l_index] + sub_matrix[m][k_index] - sub_matrix[k_index][l_index]);
@@ -109,7 +109,7 @@ double distance_estimation_quartet(int m, int n, int number, double sub_matrix[n
                     }
             }
             
-            if(sub_matrix[n][k_index] + sub_matrix[m][l_index] - sub_matrix[k_index][l_index] > 0 && sub_matrix[n][l_index] + sub_matrix[m][k_index] - sub_matrix[k_index][l_index] > 0)
+            else if(sub_matrix[n][k_index] + sub_matrix[m][l_index] - sub_matrix[k_index][l_index] > sub_matrix[n][l_index] + sub_matrix[m][k_index] - sub_matrix[k_index][l_index])
             {
                     //DIVISER PAR DEUX BORDEL !!!!
                     d_1 = 0.5 * (sub_matrix[m][k_index] + sub_matrix[m][l_index] - sub_matrix[k_index][l_index]);
@@ -136,6 +136,16 @@ double distance_estimation_quartet(int m, int n, int number, double sub_matrix[n
                         fprintf(log_file, "-----------\n");
                         
                     }
+            }
+            else
+            {
+                fprintf(log_file, "-----------\n");
+                fprintf(log_file, "!!!TROIS %d\n", n);
+                fprintf(log_file, "m = %d - n = %d\n", m, n);
+                fprintf(log_file, "%d, %d\n", k, l);
+                fprintf(log_file, "%d %d\n", k_index, l_index);
+                fprintf(log_file, "%lf, %lf, %lf, %lf, %lf\n", sub_matrix[m][k_index], sub_matrix[m][l_index], sub_matrix[n][k_index], sub_matrix[n][l_index], sub_matrix[k_index][l_index]);
+                fprintf(log_file, "-----------\n");
             }
             
             if(opti_dist != -99.0) break;
