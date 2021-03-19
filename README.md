@@ -24,4 +24,5 @@
 <p>
 To build Treemputer type : <br />
    <code> make </code>
+In the downloaded directory
 </p>
